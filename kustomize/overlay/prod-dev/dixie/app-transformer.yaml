@@ -1,0 +1,33 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+type: service
+applicationContainers:
+  - name: main-container
+    imageRegistry: test
+    imageTag: latest
+    cpuRequestMili: 100
+    cpuLimitMili: 200
+    memoryRequestMb: 100
+    memoryLimitMb: 200
+    applicationPorts:
+      - port: 80
+        protocol: TCP
+minReplicas: 1
+maxReplicas: 1
+terminationGracePeriodSeconds: 60
+namespace: default
+name: dixie
+labels:
+  app: dixie
+  application-id: app_52ce917b-6ebf-4441-aa86-b5986a0aceff
+  project-id: project_263dda5d-b085-43ab-a63f-9da65c09ef8f
+  organization-id: org_01b50229-db34-43d4-8f3e-d1aeb683d900
+  environment-id: env_e10867ef-7158-4d00-bb5c-4b2c624ed41e
+  environment-name: prod-dev
+serviceType: ClusterIP
