@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spiderman
+  labels:
+    app: spiderman
+    application-id: app_0ac63018-121f-49db-91f0-1f608aae33d4
+spec:
+  selector:
+    matchLabels:
+      app: spiderman
+  template:
+    metadata:
+      labels:
+        app: spiderman
