@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: spiderman
+    application-id: app_0ac63018-121f-49db-91f0-1f608aae33d4
+  name: spiderman
+spec:
+  selector:
+    app: spiderman
