@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: ebt
+    application-id: app_264f97f8-f79f-4a61-9445-6263f3c89bf3
+  name: ebt
+spec:
+  selector:
+    app: ebt
