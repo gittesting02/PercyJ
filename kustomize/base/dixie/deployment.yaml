@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dixie
+  labels:
+    app: dixie
+    application-id: app_52ce917b-6ebf-4441-aa86-b5986a0aceff
+spec:
+  selector:
+    matchLabels:
+      app: dixie
+  template:
+    metadata:
+      labels:
+        app: dixie
