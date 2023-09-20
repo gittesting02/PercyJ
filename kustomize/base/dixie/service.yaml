@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: dixie
+    application-id: app_52ce917b-6ebf-4441-aa86-b5986a0aceff
+  name: dixie
+spec:
+  selector:
+    app: dixie
