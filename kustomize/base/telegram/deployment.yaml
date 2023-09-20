@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telegram
+  labels:
+    app: telegram
+    application-id: app_62f52b69-7eb3-4a2f-b9c0-9a7ec6e6b12a
+spec:
+  selector:
+    matchLabels:
+      app: telegram
+  template:
+    metadata:
+      labels:
+        app: telegram
