@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: hey
+  labels:
+    environment-id: env_e10867ef-7158-4d00-bb5c-4b2c624ed41e
+    project-id: project_263dda5d-b085-43ab-a63f-9da65c09ef8f
+    project-name: PercyJ
+    environment-name: prod-dev
+    organization-id: org_01b50229-db34-43d4-8f3e-d1aeb683d900
