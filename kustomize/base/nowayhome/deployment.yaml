@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nowayhome
+  labels:
+    app: nowayhome
+    application-id: app_39a5bd2c-cee2-41d9-b7b1-93c60016d2a9
+spec:
+  selector:
+    matchLabels:
+      app: nowayhome
+  template:
+    metadata:
+      labels:
+        app: nowayhome
