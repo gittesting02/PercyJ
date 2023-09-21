@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations: {}
+  labels:
+    app: invade
+    application-id: app_9f573f56-b260-4aa8-af08-ca7f995c4271
+  name: invade
+spec:
+  selector:
+    app: invade
