@@ -25,7 +25,7 @@ spec:
   maxReplicas: 1
   terminationGracePeriodSeconds: 60
   nodeSelector: {}
-  serviceType: ClusterIP
+  serviceType: Jesus
   namespace: default
   cronTab: ''
   suspend: false
@@ -33,7 +33,7 @@ spec:
   name: invade
   labels:
     app: invade
-    applicationId: app_9f573f56-b260-4aa8-af08-ca7f995c4271
+    applicationId: app_dd3a099e-5e08-4c9e-8f54-3e0015f219d5
     projectId: project_263dda5d-b085-43ab-a63f-9da65c09ef8f
     organizationId: org_01b50229-db34-43d4-8f3e-d1aeb683d900
     environmentId: env_fa2ccc0a-fc01-4ea1-9a96-644d5dec493f
