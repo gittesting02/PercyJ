@@ -1,0 +1,42 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  type: service
+  applicationContainers:
+    - name: main-container
+      imageRegistry: test
+      imageTag: latest
+      cpuRequestMili: 100
+      cpuLimitMili: 200
+      memoryRequestMb: 100
+      memoryLimitMb: 200
+      args: []
+      command: []
+      configMounts: []
+      applicationPorts: []
+      healthChecks: []
+  minReplicas: 1
+  maxReplicas: 1
+  terminationGracePeriodSeconds: 60
+  nodeSelector: {}
+  serviceType: ClusterIP
+  namespace: default
+  cronTab: ''
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  name: invade
+  labels:
+    app: invade
+    applicationId: app_9f573f56-b260-4aa8-af08-ca7f995c4271
+    projectId: project_263dda5d-b085-43ab-a63f-9da65c09ef8f
+    organizationId: org_01b50229-db34-43d4-8f3e-d1aeb683d900
+    environmentId: env_fa2ccc0a-fc01-4ea1-9a96-644d5dec493f
+    environmentName: staging
+  horizontalAutoScalingRules: []
+  volumes: []
