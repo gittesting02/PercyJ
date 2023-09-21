@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dairy
+  labels:
+    app: dairy
+    application-id: app_0777e876-0bfd-4b50-b579-7c0fbf8926e4
+spec:
+  selector:
+    matchLabels:
+      app: dairy
+  template:
+    metadata:
+      labels:
+        app: dairy
