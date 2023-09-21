@@ -1,0 +1,15 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: invade
+  labels:
+    app: invade
+    application-id: app_9f573f56-b260-4aa8-af08-ca7f995c4271
+spec:
+  selector:
+    matchLabels:
+      app: invade
+  template:
+    metadata:
+      labels:
+        app: invade
