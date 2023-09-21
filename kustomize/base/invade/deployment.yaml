@@ -4,7 +4,7 @@ metadata:
   name: invade
   labels:
     app: invade
-    application-id: app_dd3a099e-5e08-4c9e-8f54-3e0015f219d5
+    application-id: app_95d3c00a-51d1-42ed-833d-14232eec4049
 spec:
   selector:
     matchLabels:
