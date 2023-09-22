@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: justgowithit
+  labels:
+    app: justgowithit
+spec:
+  selector:
+    matchLabels:
+      app: justgowithit
+  template:
+    metadata:
+      labels:
+        app: justgowithit
