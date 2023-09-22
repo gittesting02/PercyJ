@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jinx
+  labels:
+    app: jinx
+spec:
+  selector:
+    matchLabels:
+      app: jinx
+  template:
+    metadata:
+      labels:
+        app: jinx
