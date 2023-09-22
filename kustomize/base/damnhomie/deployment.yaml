@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: damnhomie
+  labels:
+    app: damnhomie
+spec:
+  selector:
+    matchLabels:
+      app: damnhomie
+  template:
+    metadata:
+      labels:
+        app: damnhomie
