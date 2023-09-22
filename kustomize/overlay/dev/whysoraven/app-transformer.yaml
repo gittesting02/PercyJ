@@ -1,0 +1,47 @@
+apiVersion: transformers.customplugin.co/v1
+kind: SkyUAppTransformer
+metadata:
+  name: skyu-deployment
+  annotations:
+    config.kubernetes.io/function: |
+      exec:
+        path: skyu-app-transformer
+spec:
+  type: Deployment
+  applicationContainers:
+    - name: main-container
+      imageRegistry: my-registry
+      imageTag: v1.0
+      cpuRequestMili: 100
+      cpuLimitMili: 200
+      memoryRequestMb: 100
+      memoryLimitMb: 200
+      applicationPorts:
+        - port: 80
+          protocol: TCP
+  minReplicas: 2
+  maxReplicas: 5
+  terminationGracePeriodSeconds: 30
+  nodeSelector:
+    kubernetes.io/hostname: my-node-name
+  serviceType: LoadBalancer
+  namespace: my-namespace
+  cronTab: ''
+  suspend: false
+  ttlSecondsAfterFinished: 0
+  name: my-app
+  labels:
+    app: whysoraven
+    env: production
+    projectId: project_263dda5d-b085-43ab-a63f-9da65c09ef8f
+    organizationId: org_01b50229-db34-43d4-8f3e-d1aeb683d900
+    environmentId: env_dfaef679-d61e-4974-a005-07abcc6b1147
+    environmentName: dev
+  horizontalAutoScalingRules:
+    - ruleType: cpu
+      percentage: 80
+  volumes:
+    - name: my-volume
+      type: PersistentVolumeClaim
+      pvc:
+        claimName: my-claim
